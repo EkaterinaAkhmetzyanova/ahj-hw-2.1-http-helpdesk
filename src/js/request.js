@@ -9,7 +9,7 @@ export default class Request {
   allTickets() {
     return new Promise((resolve, reject) => {
       const xhr = new XMLHttpRequest();
-      xhr.open('GET', 'https://server-testtest.herokuapp.com/?method=allTickets');
+      xhr.open('GET', 'https://ahj-hw-http-helpdesk-backend.herokuapp.com/?method=allTickets');
       // xhr.open('GET', 'http://localhost:8080/?method=allTickets');
       xhr.addEventListener('load', () => {
         if (xhr.status >= 200 && xhr.status < 300) {
@@ -31,7 +31,7 @@ export default class Request {
       const xhr = new XMLHttpRequest();
       const params = new URLSearchParams();
       params.append('id', id);
-      xhr.open('GET', `https://server-testtest.herokuapp.com/?method=ticketById&id=${id}`);
+      xhr.open('GET', `https://ahj-hw-http-helpdesk-backend.herokuapp.com/?method=ticketById&id=${id}`);
       // xhr.open('GET', `http://localhost:8080/?method=ticketById&id=${id}`);
       xhr.addEventListener('load', () => {
         if (xhr.status >= 200 && xhr.status < 300) {
@@ -54,7 +54,7 @@ export default class Request {
       params.append('name', name);
       params.append('description', description);
       const xhr = new XMLHttpRequest();
-      xhr.open('POST', 'https://server-testtest.herokuapp.com/?method=createTicket');
+      xhr.open('POST', 'https://ahj-hw-http-helpdesk-backend.herokuapp.com/?method=createTicket');
       // xhr.open('POST', 'http://localhost:8080/?method=createTicket');
       xhr.addEventListener('load', () => {
         if (xhr.status >= 200 && xhr.status < 300) {
@@ -76,7 +76,7 @@ export default class Request {
       const xhr = new XMLHttpRequest();
       const params = new URLSearchParams();
       params.append('id', id);
-      xhr.open('DELETE', `https://server-testtest.herokuapp.com/?method=removeById&id=${id}`);
+      xhr.open('DELETE', `https://ahj-hw-http-helpdesk-backend.herokuapp.com/?method=removeById&id=${id}`);
       // xhr.open('POST', `http://localhost:8080/?method=removeById&id=${id}`);
       xhr.addEventListener('load', () => {
         if (xhr.status >= 200 && xhr.status < 300) {
@@ -101,7 +101,7 @@ export default class Request {
       params.append('name', name);
       params.append('description', description);
       console.log(params);
-      xhr.open('POST', `https://server-testtest.herokuapp.com/?method=editTicket&id=${id}`);
+      xhr.open('POST', `https://ahj-hw-http-helpdesk-backend.herokuapp.com/?method=editTicket&id=${id}`);
       // xhr.open('POST', 'http://localhost:8080/?method=editTicket');
       xhr.addEventListener('load', () => {
         if (xhr.status >= 200 && xhr.status < 300) {
